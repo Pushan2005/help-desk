@@ -1,0 +1,29 @@
+Overview:
+
+Help-Desk is a platform to manage tickets for issues raised by our customers. 
+
+On the backend, we will have a 3 roles.
+Admin, Tech Support, End-Users
+
+Admins - Full Access to view, modify and delete tickets from records
+Tech Support - Can only view close tickets and reopen closed tickets.
+End-Users - Can create tickets, only view their own tickets, close tickets and delete their own tickets.
+
+
+Task Assignments:
+- strictly follow Maia style with ShadCn components for every page, prefer greyscale colours as much as possible
+- refer to /login page for a rough idea of the design language
+- Only write frontend code, all database calls and other fetches will be written by Mudit and Me
+
+samarth:
+
+landing page
+
+sagar:
+
+tickets page where each ticket is in the form of a card. 
+colocate a ticket-card.tsx file for the respective component.
+
+the page should render multiple tickets cards using a map function.
+The type of data each card recieves is present in /lib/types.ts
+
