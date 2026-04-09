@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { login, signup } from "./actions";
+import { login } from "./actions";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import {
@@ -12,7 +12,10 @@ import {
 
 export default function LoginPage() {
     return (
-        <form className="flex justify-center items-center min-h-screen">
+        <form
+            action={login}
+            className="flex justify-center items-center min-h-screen"
+        >
             <Card className="w-full max-w-md">
                 <CardHeader className="space-y-1">
                     <CardTitle className="text-2xl text-center">
@@ -43,16 +46,9 @@ export default function LoginPage() {
                             required
                         />
                     </div>
-                    <div className="flex flex-col sm:flex-row gap-2 pt-4">
-                        <Button className="flex-1" formAction={login}>
+                    <div className="pt-4">
+                        <Button type="submit" className="w-full">
                             Log in
-                        </Button>
-                        <Button
-                            className="flex-1"
-                            formAction={signup}
-                            variant="outline"
-                        >
-                            Sign up
                         </Button>
                     </div>
                 </CardContent>

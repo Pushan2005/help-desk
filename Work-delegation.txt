@@ -6,8 +6,12 @@ On the backend, we will have a 3 roles.
 Admin, Tech Support, End-Users
 
 Admins - Full Access to view, modify and delete tickets from records
-Tech Support - Can only view close tickets and reopen closed tickets.
+Tech Support - Can only view close tickets and reopen closed tickets. (we may reconsider allowing ticket closure and only allow users to close their greviences or implement OTP based confirmation for closing tickets)
 End-Users - Can create tickets, only view their own tickets, close tickets and delete their own tickets.
+
+the role of the user will be checked twice, once in the frontend and once in the backend.
+The frontend checks to role to hide the options to close and/or delete tickets.
+The backend will ALWAYS make the check before allowing any modification or fetch request to the entries to prevent malicious actors who manage to fool the frontend checks from performing any unauthorized operations.
 
 
 Task Assignments:
