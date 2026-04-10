@@ -366,17 +366,7 @@ export default function Home() {
                             © {new Date().getFullYear()} Tech Sappot. All rights
                             reserved.
                         </p>
-                        <div className="mt-4 md:mt-0">
-                            <p className="text-sm text-muted-foreground">
-                                <span className="mr-2">Need help?</span>
-                                <a
-                                    href="mailto:support@techsappot.com"
-                                    className="hover:text-foreground transition-colors"
-                                >
-                                    support@techsappot.com
-                                </a>
-                            </p>
-                        </div>
+                        <div className="mt-4 md:mt-0"></div>
                     </div>
                 </div>
             </footer>
