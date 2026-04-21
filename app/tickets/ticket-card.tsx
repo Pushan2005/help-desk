@@ -158,11 +158,20 @@ export function TicketCard({
 
     const handleEditTicket = async () => {
         const supabase = await createClient();
+        console.log(
+            "Updating ticket with ID:",
+            ticket_id,
+            "New Title:",
+            editTitle,
+            "New Content:",
+            editContent,
+        );
         const { error } = await supabase
             .from("tickets")
             .update({
                 heading: editTitle,
                 content: editContent,
+                last_edited_at: new Date().toISOString(),
             })
             .eq("id", ticket_id);
 

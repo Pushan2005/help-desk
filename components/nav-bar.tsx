@@ -1,20 +1,42 @@
-export default function NavBar() {
+"use client";
+import React from "react";
+import Link from "next/link";
+
+export default function Navbar() {
     return (
-        <>
-            <nav className="w-full h-16 bg-gray-800 text-white flex items-center justify-between px-4">
-                <div className="text-lg font-bold">MyApp</div>
-                <div className="space-x-4">
-                    <a href="#" className="hover:underline">
-                        Home
-                    </a>
-                    <a href="#" className="hover:underline">
-                        About
-                    </a>
-                    <a href="#" className="hover:underline">
-                        Contact
-                    </a>
+        <nav className="bg-background border-b border-border">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-16">
+                    <div className="flex-shrink-0 flex items-center">
+                        <Link
+                            href="/"
+                            className="text-xl font-bold text-primary"
+                        >
+                            Help-Desk
+                        </Link>
+                    </div>
+                    <div className="hidden md:flex items-center space-x-4">
+                        <Link
+                            href="/tickets"
+                            className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                            Tickets
+                        </Link>
+                        <Link
+                            href="/about"
+                            className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                            About
+                        </Link>
+                        <Link
+                            href="/account"
+                            className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer bg-transparent border-none"
+                        >
+                            Account
+                        </Link>
+                    </div>
                 </div>
-            </nav>
-        </>
+            </div>
+        </nav>
     );
 }
