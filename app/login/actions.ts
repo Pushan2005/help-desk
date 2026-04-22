@@ -24,6 +24,15 @@ export async function login(formData: FormData) {
     }
 }
 
+export async function logout() {
+    const supabase = await createClient();
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+        console.error("Logout error:", error);
+        redirect("/error");
+    }
+}
+
 // export async function signup(formData: FormData) {
 // TODO: Implement signup logic
 //     // for now, we'll set up dummy accounts for testing before allowing sign-ups
